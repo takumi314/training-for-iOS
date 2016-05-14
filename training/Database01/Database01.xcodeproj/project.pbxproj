@@ -7,15 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD9755510464AC162E5834CD /* libPods-Database01.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 41DAF8F03A858933510FA9B0 /* libPods-Database01.a */; };
 		E16698921CE6F80800F47A39 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E16698911CE6F80800F47A39 /* main.m */; };
 		E16698951CE6F80800F47A39 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E16698941CE6F80800F47A39 /* AppDelegate.m */; };
 		E16698981CE6F80800F47A39 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E16698971CE6F80800F47A39 /* ViewController.m */; };
 		E166989B1CE6F80800F47A39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E16698991CE6F80800F47A39 /* Main.storyboard */; };
 		E166989D1CE6F80800F47A39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E166989C1CE6F80800F47A39 /* Assets.xcassets */; };
 		E16698A01CE6F80800F47A39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E166989E1CE6F80800F47A39 /* LaunchScreen.storyboard */; };
+		E1712B961CE7106400446C86 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E1712B951CE7106400446C86 /* libsqlite3.0.tbd */; };
+		E1712BA31CE710CC00446C86 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = E1712B991CE710CC00446C86 /* FMDatabase.m */; settings = {ASSET_TAGS = (); }; };
+		E1712BA41CE710CC00446C86 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E1712B9B1CE710CC00446C86 /* FMDatabaseAdditions.m */; settings = {ASSET_TAGS = (); }; };
+		E1712BA51CE710CC00446C86 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = E1712B9D1CE710CC00446C86 /* FMDatabasePool.m */; settings = {ASSET_TAGS = (); }; };
+		E1712BA61CE710CC00446C86 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = E1712B9F1CE710CC00446C86 /* FMDatabaseQueue.m */; settings = {ASSET_TAGS = (); }; };
+		E1712BA71CE710CC00446C86 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = E1712BA21CE710CC00446C86 /* FMResultSet.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		41DAF8F03A858933510FA9B0 /* libPods-Database01.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Database01.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		493FCFE905F41971CB7824AF /* Pods-Database01.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Database01.release.xcconfig"; path = "Pods/Target Support Files/Pods-Database01/Pods-Database01.release.xcconfig"; sourceTree = "<group>"; };
+		D19E305FE566214180587416 /* Pods-Database01.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Database01.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Database01/Pods-Database01.debug.xcconfig"; sourceTree = "<group>"; };
 		E166988D1CE6F80800F47A39 /* Database01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Database01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E16698911CE6F80800F47A39 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E16698931CE6F80800F47A39 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +36,18 @@
 		E166989C1CE6F80800F47A39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E166989F1CE6F80800F47A39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E16698A11CE6F80800F47A39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1712B951CE7106400446C86 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		E1712B981CE710CC00446C86 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		E1712B991CE710CC00446C86 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		E1712B9A1CE710CC00446C86 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		E1712B9B1CE710CC00446C86 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		E1712B9C1CE710CC00446C86 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		E1712B9D1CE710CC00446C86 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		E1712B9E1CE710CC00446C86 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		E1712B9F1CE710CC00446C86 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		E1712BA11CE710CC00446C86 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		E1712BA21CE710CC00446C86 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		E1712BAA1CE72F6D00446C86 /* FMDB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +55,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1712B961CE7106400446C86 /* libsqlite3.0.tbd in Frameworks */,
+				AD9755510464AC162E5834CD /* libPods-Database01.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2BEA63CBDF4F9AFD2B267812 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D19E305FE566214180587416 /* Pods-Database01.debug.xcconfig */,
+				493FCFE905F41971CB7824AF /* Pods-Database01.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4C197042A5256BEA6987A774 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E1712B951CE7106400446C86 /* libsqlite3.0.tbd */,
+				41DAF8F03A858933510FA9B0 /* libPods-Database01.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E16698841CE6F80800F47A39 = {
 			isa = PBXGroup;
 			children = (
 				E166988F1CE6F80800F47A39 /* Database01 */,
 				E166988E1CE6F80800F47A39 /* Products */,
+				2BEA63CBDF4F9AFD2B267812 /* Pods */,
+				4C197042A5256BEA6987A774 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +102,7 @@
 		E166988F1CE6F80800F47A39 /* Database01 */ = {
 			isa = PBXGroup;
 			children = (
+				E1712B971CE7108A00446C86 /* FMDB */,
 				E16698931CE6F80800F47A39 /* AppDelegate.h */,
 				E16698941CE6F80800F47A39 /* AppDelegate.m */,
 				E16698961CE6F80800F47A39 /* ViewController.h */,
@@ -79,6 +124,24 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		E1712B971CE7108A00446C86 /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				E1712B981CE710CC00446C86 /* FMDatabase.h */,
+				E1712B991CE710CC00446C86 /* FMDatabase.m */,
+				E1712B9A1CE710CC00446C86 /* FMDatabaseAdditions.h */,
+				E1712B9B1CE710CC00446C86 /* FMDatabaseAdditions.m */,
+				E1712B9C1CE710CC00446C86 /* FMDatabasePool.h */,
+				E1712B9D1CE710CC00446C86 /* FMDatabasePool.m */,
+				E1712B9E1CE710CC00446C86 /* FMDatabaseQueue.h */,
+				E1712B9F1CE710CC00446C86 /* FMDatabaseQueue.m */,
+				E1712BAA1CE72F6D00446C86 /* FMDB.h */,
+				E1712BA11CE710CC00446C86 /* FMResultSet.h */,
+				E1712BA21CE710CC00446C86 /* FMResultSet.m */,
+			);
+			name = FMDB;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +149,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E16698A41CE6F80800F47A39 /* Build configuration list for PBXNativeTarget "Database01" */;
 			buildPhases = (
+				DBE14E4F0D072DC4ED7F82FF /* 📦 Check Pods Manifest.lock */,
 				E16698891CE6F80800F47A39 /* Sources */,
 				E166988A1CE6F80800F47A39 /* Frameworks */,
 				E166988B1CE6F80800F47A39 /* Resources */,
+				1E1DB0133C973EABA200C097 /* 📦 Embed Pods Frameworks */,
+				498F9D15AD7941842F36472B /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -144,14 +210,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1E1DB0133C973EABA200C097 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Database01/Pods-Database01-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		498F9D15AD7941842F36472B /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Database01/Pods-Database01-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DBE14E4F0D072DC4ED7F82FF /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E16698891CE6F80800F47A39 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				E16698981CE6F80800F47A39 /* ViewController.m in Sources */,
+				E1712BA51CE710CC00446C86 /* FMDatabasePool.m in Sources */,
 				E16698951CE6F80800F47A39 /* AppDelegate.m in Sources */,
+				E1712BA61CE710CC00446C86 /* FMDatabaseQueue.m in Sources */,
 				E16698921CE6F80800F47A39 /* main.m in Sources */,
+				E1712BA31CE710CC00446C86 /* FMDatabase.m in Sources */,
+				E1712BA71CE710CC00446C86 /* FMResultSet.m in Sources */,
+				E1712BA41CE710CC00446C86 /* FMDatabaseAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +378,7 @@
 		};
 		E16698A51CE6F80800F47A39 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D19E305FE566214180587416 /* Pods-Database01.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Database01/Info.plist;
@@ -270,6 +390,7 @@
 		};
 		E16698A61CE6F80800F47A39 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 493FCFE905F41971CB7824AF /* Pods-Database01.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Database01/Info.plist;
@@ -298,6 +419,7 @@
 				E16698A61CE6F80800F47A39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
