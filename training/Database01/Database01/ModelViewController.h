@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "FMDB.h"
 
 @interface ModelViewController : UIViewController
 

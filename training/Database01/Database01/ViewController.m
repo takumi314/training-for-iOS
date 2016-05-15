@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "FMDB.h"
 #import "ModelViewController.h"
 
 @interface ViewController ()
@@ -19,6 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
 }
 
 - (void)didReceiveMemoryWarning {

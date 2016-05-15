@@ -7,6 +7,7 @@
 //
 
 #import "ModelViewController.h"
+#import "FMDB.h"
 
 @interface ModelViewController ()
 
@@ -16,7 +17,7 @@
 
 - (void) createTable:(NSArray*) newTable;
 - (void) insertTable:(NSArray*) setData;
-- (NSString*) selectTable:(NSArray*) selectData;
+- (NSString*) selectTable:(NSString*) selectData;
 - (void) deleteTable:(NSArray*) delateData;
 
 @end
@@ -26,12 +27,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // To prepare a database.
     _path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     _dbPathStr = [_path objectAtIndex:0];
-    _db = [FMDatabase databaseWithPath:[_dbPathStr stringByAppendingPathComponent:@"database.db"]];
-    
+//        NSLog(@"%@",_dbPathStr);
+    _db = [FMDatabase databaseWithPath:[_dbPathStr stringByAppendingPathComponent:@"tr_todo.db"]];
+
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -40,7 +42,8 @@
 
 
 
-#pragma mark - To tanke control of Database
+#pragma mark - Database.h
+
 
 /**
  To create a new table.
@@ -49,12 +52,14 @@
  */
  
 - (void) createTable:(NSArray *) newTable {
-    FMDatabase* db  = [FMDatabase databaseWithPath:@"/FMDB"];
-    NSString*   sql = @"CREATE TABLE IF NOT EXISTS tr_todo (tr_id INTEGER PRIMARY KEY AUTOINCREMENT, todo_title TEXT, todo_contents TEXT, created TEXT, modified TEXT, limit_data TEXT);";
 
-    [db open];
-    [db executeUpdate:sql];
-    [db close];
+    _db  = [FMDatabase databaseWithPath:@"tr_todo.db"];
+
+    NSString*   sql = @"CREATE TABLE IF NOT EXISTStr_todo (tr_id INTEGER PRIMARY KEY AUTOINCREMENT, todo_title TEXT, todo_contents TEXT, created TEXT, modified TEXT, limit_data TEXT);";
+
+    [_db open];
+    [_db executeUpdate:sql];
+    [_db close];
 
 }
 
@@ -64,12 +69,13 @@ To insert datas.
 @param setData
 */
 - (void) insertTable:(NSArray*) setData {
-    FMDatabase *db = [FMDatabase databaseWithPath:@"データベースのパス"];
+    
+    _db = [FMDatabase databaseWithPath:@"tr_todo.db"];
     NSString *sql = @"INSERT INTO tablename (name) VALUES (?)";
     
-    [db open];
-    [db executeUpdate:sql, @"入れるデータ"];
-    [db close];
+    [_db open];
+    [_db executeUpdate:sql, @"入れるデータ"];
+    [_db close];
 }
 
 
@@ -78,9 +84,10 @@ To insert datas.
  @param selectData
  @return selectTable
  */
-- (NSArray*) selectTable:(NSArray*) selectData {
-    FMDatabase *db  = [FMDatabase databaseWithPath:@"データベースのパス"];
-    NSString *sql = @"SELECT id, name FROM tablename;";
+- (NSArray*) selectTable:(NSString*) selectData {
+    FMDatabase *db  = [FMDatabase databaseWithPath:@"tr_todo.db"];
+    NSString *sql = [_dbPathStr stringByAppendingFormat:@"SELECT   %@ FROM tr_todo", selectData ];
+    //NSString *sql = @"SELECT id, name FROM tablename;";
     
     [db open];
     
@@ -104,11 +111,11 @@ To delete a table
 @return
  */
 - (void) deleteTable:(NSArray*) delateData {
-    FMDatabase *db = [FMDatabase databaseWithPath:@"データベースのパス"];
+    FMDatabase *db = [FMDatabase databaseWithPath:@"tr_todo.db"];
     NSString *sql = @"DELETE FROM tablename WHERE id = ?";
     
     [db open];
-    [db executeUpdate:sql, [NSNumber numberWithInteger:n]];
+  //  [db executeUpdate:sql, [NSNumber numberWithInteger:n]];
     [db close];
     
 }
