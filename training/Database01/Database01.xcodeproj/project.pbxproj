@@ -20,6 +20,7 @@
 		E1712BA51CE710CC00446C86 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = E1712B9D1CE710CC00446C86 /* FMDatabasePool.m */; settings = {ASSET_TAGS = (); }; };
 		E1712BA61CE710CC00446C86 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = E1712B9F1CE710CC00446C86 /* FMDatabaseQueue.m */; settings = {ASSET_TAGS = (); }; };
 		E1712BA71CE710CC00446C86 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = E1712BA21CE710CC00446C86 /* FMResultSet.m */; settings = {ASSET_TAGS = (); }; };
+		E1712BAD1CE83C1B00446C86 /* ModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1712BAC1CE83C1B00446C86 /* ModelViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,8 @@
 		E1712BA11CE710CC00446C86 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
 		E1712BA21CE710CC00446C86 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		E1712BAA1CE72F6D00446C86 /* FMDB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		E1712BAB1CE83C1B00446C86 /* ModelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelViewController.h; sourceTree = "<group>"; };
+		E1712BAC1CE83C1B00446C86 /* ModelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +115,8 @@
 				E166989E1CE6F80800F47A39 /* LaunchScreen.storyboard */,
 				E16698A11CE6F80800F47A39 /* Info.plist */,
 				E16698901CE6F80800F47A39 /* Supporting Files */,
+				E1712BAB1CE83C1B00446C86 /* ModelViewController.h */,
+				E1712BAC1CE83C1B00446C86 /* ModelViewController.m */,
 			);
 			path = Database01;
 			sourceTree = "<group>";
@@ -267,6 +272,7 @@
 				E1712BA51CE710CC00446C86 /* FMDatabasePool.m in Sources */,
 				E16698951CE6F80800F47A39 /* AppDelegate.m in Sources */,
 				E1712BA61CE710CC00446C86 /* FMDatabaseQueue.m in Sources */,
+				E1712BAD1CE83C1B00446C86 /* ModelViewController.m in Sources */,
 				E16698921CE6F80800F47A39 /* main.m in Sources */,
 				E1712BA31CE710CC00446C86 /* FMDatabase.m in Sources */,
 				E1712BA71CE710CC00446C86 /* FMResultSet.m in Sources */,
