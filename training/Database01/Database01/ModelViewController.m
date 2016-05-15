@@ -15,10 +15,7 @@
 @property (nonatomic,weak) NSString *dbPathStr;
 @property (nonatomic,weak) FMDatabase *db;
 
-- (void) createTable:(NSArray*) newTable;
-- (void) insertTable:(NSArray*) setData;
-- (NSString*) selectTable:(NSString*) selectData;
-- (void) deleteTable:(NSArray*) delateData;
+
 
 @end
 
@@ -51,7 +48,7 @@
  @return Nothing
  */
  
-- (void) createTable:(NSArray *) newTable {
+- (void) createTable:(NSString *) newTitle:(NSString*) newContents:(NSString*) limitDate {
 
     _db  = [FMDatabase databaseWithPath:@"tr_todo.db"];
 

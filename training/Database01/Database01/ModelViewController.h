@@ -10,7 +10,10 @@
 
 @interface ModelViewController : UIViewController
 
-
+- (void) createTable:(NSString *) newTitle:(NSString*) newContents:(NSString*) limitDate;
+- (void) insertTable:(NSArray*) setData;
+- (NSString*) selectTable:(NSString*) selectData;
+- (void) deleteTable:(NSArray*) delateData;
 
    
 @end
