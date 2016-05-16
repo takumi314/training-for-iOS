@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,48 +17,79 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="todo" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eMw-Ru-fGh">
-                                <rect key="frame" x="109" y="94" width="197" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="todo" borderStyle="bezel" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eMw-Ru-fGh">
+                                <rect key="frame" x="0.0" y="462" width="414" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="2dD-Ap-qhe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="titleField:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="D6H-UV-JmZ"/>
+                                    <action selector="titleFiledAction:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="x8X-Kw-vls"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="contents" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mIa-P7-Bsj">
-                                <rect key="frame" x="109" y="166" width="197" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="contents" borderStyle="bezel" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mIa-P7-Bsj">
+                                <rect key="frame" x="0.0" y="499" width="414" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="nJQ-WC-SBe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="contentsField:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="KTY-Ry-p73"/>
+                                    <action selector="contentsFieldAction:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="q25-gL-Gtn"/>
                                 </connections>
                             </textField>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="9ik-nW-95l">
-                                <rect key="frame" x="-8" y="238" width="422" height="216"/>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="9ik-nW-95l">
+                                <rect key="frame" x="0.0" y="538" width="414" height="137"/>
                                 <date key="date" timeIntervalSinceReferenceDate="485005015.09308499">
                                     <!--2016-05-15 11:36:55 +0000-->
                                 </date>
                                 <connections>
-                                    <action selector="datePicker:" destination="BYZ-38-t0r" eventType="valueChanged" id="G9H-0b-SEP"/>
-                                    <action selector="limit_data:" destination="BYZ-38-t0r" eventType="valueChanged" id="Rd4-0t-gRb"/>
+                                    <action selector="dataPicker:" destination="BYZ-38-t0r" eventType="valueChanged" id="VKO-0T-5c8"/>
                                 </connections>
                             </datePicker>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="koH-9x-h5f">
-                                <rect key="frame" x="147" y="566" width="113" height="81"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="koH-9x-h5f">
+                                <rect key="frame" x="72" y="683" width="271" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="qAr-pN-eGR"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Done"/>
                                 <connections>
-                                    <action selector="newTableBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TuF-3U-01g"/>
+                                    <action selector="doneButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pik-9M-CcA"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iHc-du-9MC">
+                                <rect key="frame" x="0.0" y="20" width="414" height="431"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iHc-du-9MC" firstAttribute="leading" secondItem="eMw-Ru-fGh" secondAttribute="leading" id="0Ug-HX-96i"/>
+                            <constraint firstItem="eMw-Ru-fGh" firstAttribute="trailing" secondItem="mIa-P7-Bsj" secondAttribute="trailing" id="2kP-vk-buO"/>
+                            <constraint firstItem="koH-9x-h5f" firstAttribute="top" secondItem="9ik-nW-95l" secondAttribute="bottom" constant="8" id="3E0-NM-fLi"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="koH-9x-h5f" secondAttribute="bottom" constant="14" id="7Uk-4b-bgy"/>
+                            <constraint firstItem="9ik-nW-95l" firstAttribute="centerX" secondItem="koH-9x-h5f" secondAttribute="centerX" id="AYQ-4m-aWq"/>
+                            <constraint firstItem="iHc-du-9MC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="C6X-0h-LFd"/>
+                            <constraint firstItem="koH-9x-h5f" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="52" id="GWA-zv-M6e"/>
+                            <constraint firstItem="mIa-P7-Bsj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="JPw-N0-j4q"/>
+                            <constraint firstItem="eMw-Ru-fGh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="442" id="MFu-4a-WV5"/>
+                            <constraint firstItem="mIa-P7-Bsj" firstAttribute="leading" secondItem="eMw-Ru-fGh" secondAttribute="leading" id="Xpg-j5-ViJ"/>
+                            <constraint firstItem="9ik-nW-95l" firstAttribute="top" secondItem="eMw-Ru-fGh" secondAttribute="bottom" constant="36" id="abm-y8-fIX"/>
+                            <constraint firstItem="mIa-P7-Bsj" firstAttribute="top" secondItem="eMw-Ru-fGh" secondAttribute="bottom" constant="-3" id="iGH-Dc-al2"/>
+                            <constraint firstItem="mIa-P7-Bsj" firstAttribute="trailing" secondItem="9ik-nW-95l" secondAttribute="trailing" id="kra-R7-pOh"/>
+                            <constraint firstAttribute="trailing" secondItem="9ik-nW-95l" secondAttribute="trailing" id="mGE-5t-zf6"/>
+                            <constraint firstItem="eMw-Ru-fGh" firstAttribute="top" secondItem="iHc-du-9MC" secondAttribute="bottom" constant="11" id="pX7-h5-fUB"/>
+                            <constraint firstItem="mIa-P7-Bsj" firstAttribute="leading" secondItem="9ik-nW-95l" secondAttribute="leading" id="qhU-jW-5jk"/>
+                            <constraint firstItem="iHc-du-9MC" firstAttribute="trailing" secondItem="eMw-Ru-fGh" secondAttribute="trailing" id="zkm-dg-LBs"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
-                        <outlet property="dataPickerLabel" destination="9ik-nW-95l" id="ia0-cU-J07"/>
-                        <outlet property="textContents" destination="mIa-P7-Bsj" id="yTE-b3-K4q"/>
-                        <outlet property="textTitle" destination="eMw-Ru-fGh" id="rzP-xh-W9J"/>
+                        <outlet property="contentsFieldView" destination="mIa-P7-Bsj" id="Vpl-tt-0Xl"/>
+                        <outlet property="datePickerView" destination="9ik-nW-95l" id="vuR-FI-6SN"/>
+                        <outlet property="titleFiledView" destination="eMw-Ru-fGh" id="E2o-bZ-dJz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

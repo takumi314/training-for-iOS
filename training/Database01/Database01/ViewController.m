@@ -10,15 +10,17 @@
 #import "ModelViewController.h"
 
 @interface ViewController ()
-@property (weak, nonatomic) IBOutlet UITextField *textTitle;
-@property (weak, nonatomic) IBOutlet UITextField *textContents;
-@property (weak, nonatomic) IBOutlet UIDatePicker *dataPickerLabel;
-@property (weak,nonatomic) NSString *limitToDo;
 
-- (IBAction)titleField:(id)sender;
-- (IBAction)contentsField:(id)sender;
-- (IBAction)datePicker:(id)sender;
-- (IBAction)newTableBtn:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextField *titleFiledView;
+@property (weak, nonatomic) IBOutlet UITextField *contentsFieldView;
+@property (weak, nonatomic) IBOutlet UIDatePicker *datePickerView;
+//@property (weak, nonatomic) NSString *limitDate;
+
+- (IBAction)titleFiledAction:(id)sender;
+- (IBAction)contentsFieldAction:(id)sender;
+- (IBAction)dataPicker:(id)sender;
+- (IBAction)doneButton:(id)sender;
+
 
 @end
 
@@ -27,10 +29,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
-    //_inputData = @{ , };
-    
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -39,33 +37,37 @@
 }
 
 
+
 #pragma mark - IBAction method
 
-- (IBAction)titleField:(id)sender {
-    [_textTitle setText:sender];
+
+
+- (IBAction)titleFiledAction:(id)sender {
+    _titleFiledView.text = sender;
 }
 
-- (IBAction)contentsField:(id)sender {
-    [_textContents setText:sender];
+- (IBAction)contentsFieldAction:(id)sender {
+    _contentsFieldView.text = sender;
 }
 
-- (IBAction)datePicker:(id)sender {
+- (IBAction)dataPicker:(id)sender {
     NSDateFormatter *df = [[NSDateFormatter alloc] init];
-    df.dateFormat = @"yyyy-MM-dd";
-    _limitToDo = [df stringFromDate: _dataPickerLabel.date];
-    
-    return ;
-
+    df.dateFormat = @"yyyy-MM-dd HH:mm:ss";
+    [df stringFromDate: _datePickerView.date];
+    return;
 }
 
-
-- (IBAction)newTableBtn:(id)sender {
-    ModelViewController *todo = [[ModelViewController alloc] init];
-
-    return [todo createTable: _textTitle.text :_textContents.text: _limitToDo];
+- (IBAction)doneButton:(id)sender {
+    
+    ModelViewController *_model = [[ModelViewController alloc] init];
+    
+    [_model createTable];
+    
+    //NSLog(@"%@, %@", _titleFiledView.text, _contentsFieldView.text );
+    
+    [_model insertTable:_titleFiledView.text num2:_contentsFieldView.text num3: _datePickerView.date ];
     
 }
-
 
 
 @end
