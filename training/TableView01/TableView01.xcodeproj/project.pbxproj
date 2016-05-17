@@ -16,6 +16,7 @@
 		E1712BCA1CEB61A500446C86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1712BC81CEB61A500446C86 /* LaunchScreen.storyboard */; };
 		E1712BD21CEB68F500446C86 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E1712BD11CEB68F500446C86 /* libsqlite3.0.tbd */; };
 		E1712BD51CEB70F500446C86 /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = E1712BD41CEB70F500446C86 /* Model.m */; settings = {ASSET_TAGS = (); }; };
+		E1712BD91CEBDA8B00446C86 /* ModelManageController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1712BD81CEBDA8B00446C86 /* ModelManageController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		E1712BD11CEB68F500446C86 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		E1712BD31CEB70F500446C86 /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
 		E1712BD41CEB70F500446C86 /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
+		E1712BD71CEBDA8B00446C86 /* ModelManageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelManageController.h; sourceTree = "<group>"; };
+		E1712BD81CEBDA8B00446C86 /* ModelManageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelManageController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +110,8 @@
 			children = (
 				E1712BD31CEB70F500446C86 /* Model.h */,
 				E1712BD41CEB70F500446C86 /* Model.m */,
+				E1712BD71CEBDA8B00446C86 /* ModelManageController.h */,
+				E1712BD81CEBDA8B00446C86 /* ModelManageController.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -242,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1712BC21CEB61A500446C86 /* ViewController.m in Sources */,
+				E1712BD91CEBDA8B00446C86 /* ModelManageController.m in Sources */,
 				E1712BBF1CEB61A500446C86 /* AppDelegate.m in Sources */,
 				E1712BBC1CEB61A500446C86 /* main.m in Sources */,
 				E1712BD51CEB70F500446C86 /* Model.m in Sources */,
