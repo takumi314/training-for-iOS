@@ -10,6 +10,9 @@
 
 @interface Model : NSObject
 
+@property (strong, nonatomic) NSString* food;
+@property (strong, nonatomic) NSString* foodImage;
+@property (strong, nonatomic) NSString* country;
 
 
 @end
