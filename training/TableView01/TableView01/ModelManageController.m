@@ -7,12 +7,36 @@
 //
 
 #import "ModelManageController.h"
+#import "Model.h"
+#import "FMDB.h"
 
 @interface ModelManageController ()
 
 @end
 
 @implementation ModelManageController
+
+
+
+
+
+
+#pragma mark - Sqlite controller methods
+
+- (void) connectToFMDB {
+    FMDatabase *db = [[FMDatabase alloc] init];
+    
+}
+
+
+
+
+
+
+
+
+
+#pragma mark - default methods
 
 - (void)viewDidLoad {
     [super viewDidLoad];
